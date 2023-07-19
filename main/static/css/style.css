@@ -1,0 +1,27 @@
+*{
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+}
+body{
+    margin: 0;
+}
+main{
+    padding: var(--globalPadding);
+}
+input{
+    padding: 15px 15px;
+    border-radius: 8px;
+    background: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+    border: unset;
+    outline: unset;
+}
+input:focus{
+    border: 1.5px solid var(--green);
+    border: unset;
+    outline: unset;
+}
+article{
+    margin-bottom: 120px;
+}

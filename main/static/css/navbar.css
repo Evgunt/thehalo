@@ -1,0 +1,56 @@
+.navbar__container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /*background-color: var(--grey);*/
+    color: white;
+    padding: var(--globalPadding);
+    height: 105px;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__logo{
+    font-family: Koulen;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.navbar__items{
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    transition: border-bottom-width 1s;
+}
+.navbar__item:hover{
+    border-bottom: 1.5px solid var(--white);
+}
+.navbar__call{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.navbar__phone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar__phone>.phoneIcon{
+    height: 24px;
+    aspect-ratio: 1/1;
+}
+footer>.navbar__container{
+    background-color: var(--grey);
+}
+
+@media only screen and (max-width: 1200px) {
+    .navbar__items{
+        display: none;
+        background-color: yellow;
+    }
+    .navbar__call{
+        display: none;
+    }
+}

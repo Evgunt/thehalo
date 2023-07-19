@@ -1,0 +1,29 @@
+.sizeRange__container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.sizeRange__table{
+    border: var(--tableBorder);
+}
+.sizeRange__tableRow{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.sizeRange__tableItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+.sizeRange__tableHeader{
+    background-color: var(--grey);
+    color: var(--white);
+}
+.sizeRange__tableHeader>.sizeRange__tableItem{
+    padding: 13px 10px 12px 10px;
+}
+.sizeRange__tableContent>.sizeRange__tableItem{
+    padding: 28px 10px;
+}

@@ -1,0 +1,86 @@
+.title{
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #636363;
+    text-align: center;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.bold{
+    font-weight: 600;
+}
+.button{
+    display: flex;
+    padding: 24px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 24px;
+    border-radius: 8px;
+    background: var(--green);
+    color:var(--white);
+    width: fit-content;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.button:hover{
+    background: var(--lightGreen);
+}
+.button__small{
+    padding: 15px 15px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.circle{
+    aspect-ratio: 1/1;
+    width: 45px;
+    border-radius: 100%;
+    border:1px solid var(--lightGrey);
+}
+.circle:hover{
+    background-color: var(--white);
+}
+.circleBlack{
+    border: 1px solid var(--grey);
+}
+.circleBlack:hover{
+    background-color: var(--grey);
+    border: unset;
+}
+.arrow{
+    transition: background-color 0.5s;
+    display: flex;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.arrowRight{
+    background-image: url("../assets/icons/arrows/arrowRightBlack.svg");
+}
+.arrowRight:hover{
+    background-image: url("../assets/icons/arrows/arrowRightWhite.svg");
+}
+.arrowLeft{
+    background-image: url("../assets/icons/arrows/arrowLeftBlack.svg");
+}
+.arrowLeft:hover{
+    background-image: url("../assets/icons/arrows/arrowLeftWhite.svg");
+}
+@media screen and (max-width: 900px) {
+    .title{
+        font-size: 30px;
+        font-weight: 700;
+    }
+}
+@media screen and (max-width: 700px) {
+    .title{
+        font-size: 20px;
+        font-weight: 700;
+    }
+}

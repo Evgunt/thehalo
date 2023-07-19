@@ -1,0 +1,37 @@
+.about__container{
+
+}
+.about__title{
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 150%; /* 42px */
+}
+.about__text{
+    padding: 52px;
+    background-color: var(--green);
+    color: var(--white);
+    width: 50%;
+}
+.about__imageContainer{
+    width: 50%;
+}
+.about__image{
+    max-width: 100%;
+}
+.about__slider{
+    display: flex;
+    flex-direction: row;
+}
+.about__sliderArrows{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+@media screen and (max-width: 900px) {
+    .about__text{
+        width: 100%;
+    }
+    .about__imageContainer{
+        display: none;
+    }
+}

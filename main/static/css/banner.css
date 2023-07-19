@@ -1,0 +1,86 @@
+.banner__container{
+    background-image: url('../assets/images/banner/aron-yigin-dFnEgqVYMTw-unsplash 1.png');
+    background-size: 100%;
+    color: white;
+}
+.banner__content{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: var(--globalPadding);
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+.banner__text{
+    width: 60%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.banner__title{
+    font-size: 100px;
+    font-weight: 800;
+    line-height: 100.1%;
+    padding-bottom: 30px;
+}
+.banner__slogan{
+    font-size: 32px;
+    font-weight: 500;
+}
+.banner__enrollForm{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.banner__buttonContainer{
+
+}
+.banner__enrollInput{
+    display: block;
+}
+.banner__enrollFormContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.banner__imageContainer{
+    width: 40%;
+    /*height: 400px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner__image{
+    max-height: 100%;
+    max-width: 100%;
+}
+.banner__arrowButtonContainer{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+.banner__arrowButton{
+    background-image: url('../assets/icons/arrows/arrow-down.svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+@media screen and (max-width: 1500px) {
+    .banner__imageContainer{
+        display: none;
+    }
+}
+@media screen and (max-width: 700px) {
+    .banner__enrollForm{
+        flex-direction: column;
+    }
+    .banner__enrollInput{
+        font-size: 30px;
+    }
+}

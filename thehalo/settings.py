@@ -139,8 +139,8 @@ THUMBNAIL_BASEDIR = 'thumbnails'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 
-EMAIL_HOST_USER = 'Despair.keeps@gmail.com'
-EMAIL_HOST_PASSWORD = 'vjczzjxrkykvgsus'
+EMAIL_HOST_USER = 'admin@admin.com'
+EMAIL_HOST_PASSWORD = ''
 
 SERVER_EMAIL = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

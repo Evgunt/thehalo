@@ -1,14 +1,18 @@
-*{
+* {
     font-family: 'Manrope', sans-serif;
     font-size: 18px;
 }
-body{
+
+body {
     margin: 0;
+    position: relative;
 }
-main{
+
+main {
     padding: var(--globalPadding);
 }
-input{
+
+input {
     padding: 15px 15px;
     border-radius: 8px;
     background: var(--white);
@@ -16,12 +20,116 @@ input{
     font-weight: 500;
     border: unset;
     outline: unset;
+    width: 475px;
 }
-input:focus{
+
+input:focus {
+    outline: 3px solid var(--green);
+}
+
+textarea {
+    padding: 15px 15px;
+    border-radius: 8px;
+    background: var(--white);
+    font-size: 18px;
+    font-weight: 500;
     border: 1.5px solid var(--green);
-    border: unset;
     outline: unset;
+    resize: vertical;
 }
-article{
+
+textarea:focus {
+    outline: 3px solid var(--green);
+}
+
+article {
     margin-bottom: 120px;
+}
+
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
+a:visited {
+    color: unset;
+}
+
+.enrollWindow__container {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.enrollWindow__form {
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    background-color: var(--white);
+    flex-direction: column;
+    gap: 20px;
+    z-index: 4;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    margin-left: -280px;
+}
+
+.enrollWindow__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: -20px;
+}
+
+.enrollWindow__form>input {
+    border: 1px solid var(--green);
+}
+
+.enrollWindow__closeContainer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.enrollWindow__close {
+    cursor: pointer;
+}
+
+.sucsess_block {
+    display: none;
+    padding: 0 60px;
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -170px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+    background-color: var(--lightGreen);
+    text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.8);
+}
+
+.sucsess_block p {
+    font-weight: 500;
+    font-size: 22px;
+    color: #fff;
+}
+
+.error_text {
+    display: none;
+    color: #990000;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
 }

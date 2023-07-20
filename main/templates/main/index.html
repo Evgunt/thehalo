@@ -1,127 +1,139 @@
 {% extends "layout/basic.html" %}
 {% load static %}
 {% block content %}
+<div class="enrollWindow__container" id="enrollWindow">
+    <form class="enrollWindow__form">
+        <div class="enrollWindow__closeContainer">
+            <div class="enrollWindow__close">✕</div>
+        </div>
+        <div class="enrollWindow__title">Заказ на обратный звонок</div>
+        <input type="email" name="email" placeholder="Почта">
+        <input type="text" name="phone" id="phone" placeholder="+7 (___) __-__-___">
+        <textarea name="coments" placeholder="Сообщение к заказу"></textarea>
+        <div class="error_text">Данные введены неверно</div>
+        <div class="button button__small" id="sendpost">Закaзать</div>
+    </form>
+</div>
+<div class="sucsess_block" id="sucsses">
+    <p>Ваша заявка принята</p>
+</div>
 <header>
     <article class="banner__container">
         <div class="navbar__container">
-            <div class="navbar__logo">THEHALO</div>
+            <div class="navbar__logo"><img src="{% static 'assets/images/logo.png'%}" alt=""></div>
             <div class="navbar__items">
-                <div class="navbar__item">Преимущества</div>
-                <div class="navbar__item">Каталог</div>
-                <div class="navbar__item">Размерный ряд</div>
-                <div class="navbar__item">Наше производство</div>
-                <div class="navbar__item">О нас</div>
-                <div class="navbar__item">Контакты</div>
+                <div class="navbar__item" onclick="anchor('advantages')">Преимущества</div>
+                <div class="navbar__item" onclick="anchor('catalogue')">Каталог</div>
+                <div class="navbar__item" onclick="anchor('sizeRange')">Размерный ряд</div>
+                <div class="navbar__item" onclick="anchor('product')">Наше производство</div>
+                <div class="navbar__item" onclick="anchor('about')">О нас</div>
+                <div class="navbar__item" onclick="anchor('contact')">Контакты</div>
             </div>
             <div class="navbar__call">
                 <div class="navbar__phone"><img alt="phoneIcon" class="phoneIcon"
-                                                src="{% static 'assets/icons/call.svg'%}">
-                    +7(923)414-90-35
+                        src="{% static 'assets/icons/call.svg'%}">
+                    <a href="tel:+7 (923) 414-90-35">+7(923)414-90-35</a>
                 </div>
-                <div class="button button__small">Заказать звонок</div>
+                <div class="button button__small open">Заказать звонок</div>
             </div>
         </div>
         <div class="banner__content">
             <div class="banner__text">
                 <div>
                     <div class="banner__title">Thehalo первый блочный комбинат</div>
-                    <div class="banner__slogan">Доставим любой объем по Московской области и центральному региону</div>
+                    <div class="banner__slogan">Доставим любой объем по Московской области и центральному региону
+                    </div>
                 </div>
                 <div class="banner__enrollFormContainer">
                     <div class="banner__enrollFormInfo">*Теплоблоки под ваш объем с гарантией лучшей цены</div>
                     <form class="banner__enrollForm">
                         <input class="banner__enrollInput" placeholder="Введите номер телефона">
                         <div class="banner__buttonContainer">
-                            <div class="button button__small">Заказать со скидкой</div>
+                            <div class="button button__small open">Заказать со скидкой</div>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="banner__imageContainer">
-                <img class="banner__image" alt="bannerImage" src="{% static 'assets/images/banner/Ellipse%201.png'%}">
+                <img class="banner__image" alt="bannerImage" src="{% static 'assets/images/banner/Ellipse 1.png'%}">
             </div>
             <div class="banner__arrowButtonContainer">
-                <div class="banner__arrowButton arrow circle"></div>
+                <div class="banner__arrowButton arrow circle" onclick="anchor('advantages')"></div>
             </div>
         </div>
-
     </article>
 </header>
 <main>
-    <article class="advantages__container">
-        <div class="title">Почему уже более 1000 семей выбрали полистиролбетон для дома своей мечты?</div>
+    <article class="advantages__container" id="advantages">
+        <div class="title">Почему уже более <span>1000 семей выбрали полистиролбетон</span> для дома своей мечты?</div>
         <div class="advantages__list">
             <div class="advantages__item">
                 <div><img src="{% static 'assets/images/advantage1.png'%}"></div>
-                <div><span>Только экологически чистое сырье в производстве</span></div>
+                <div><span>Только <b>экологически чистое сырье</b> в производстве</span></div>
             </div>
             <div class="advantages__item">
                 <div><img src="{% static 'assets/images/advantage2.png'%}"></div>
-                <div><span>Характеристики на 100% подходят для многоэтажного строительства</span></div>
+                <div><span>Характеристики на 100% подходят для <b>многоэтажного строительства</b></span></div>
             </div>
             <div class="advantages__item">
                 <div><img src="{% static 'assets/images/advantage3.png'%}"></div>
-                <div><span>Не впитывает влагу благодаря содержанию полистирола</span></div>
+                <div><span><b>Не впитывает влагу</b> благодаря содержанию полистирола</span></div>
             </div>
             <div class="advantages__item">
                 <div><img src="{% static 'assets/images/advantage4.png'%}"></div>
-                <div><span>Исключено размножение бактерий, не привлекает грызунов и насекомых</span></div>
+                <div><span><b>Исключено размножение бактерий,</b> не привлекает грызунов и насекомых</span></div>
             </div>
             <div class="advantages__item">
                 <div><img src="{% static 'assets/images/advantage5.png'%}"></div>
-                <div><span>Экономия на растворе, армированной сетке и инвентаре</span></div>
+                <div><span><b>Экономия на растворе,</b> армированной сетке и инвентаре</span></div>
             </div>
             <div class="advantages__item">
                 <div><img src="{% static 'assets/images/advantage6.png'%}"></div>
-                <div><span>Создает отличный микроклимат, экономя до 60% затрат на отопление</span></div>
+                <div><span>Создает отличный микроклимат, <b>экономя до 60% затрат на отопление</b></span></div>
             </div>
         </div>
     </article>
-    <article class="requirements__container">
+    <article class="requirements__container" id="requirements">
         <div>
-            <div class="title">Полистиролбетон отвечает всем 7 требованиям, которые мы сформировали за 15 лет
+            <div class="title"><span>Полистиролбетон отвечает всем 7 требованиям</span>, которые мы сформировали за 15
+                лет
                 строительства домов
             </div>
             <div class="requirements__grid">
                 <div class="requirements__article">
                     <div class="requirements__listHeader">
-                        <div><img src="{% static 'assets/images/requirements/image%208.png'%}" alt="penobeton"></div>
+                        <div><img src="{% static 'assets/images/requirements/image%208.png'%}" alt="penobeton">
+                        </div>
                         <div class="requirements__listTitle">Пенобетон</div>
                     </div>
                     <div class="requirements__list">
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-cross.svg'%}">
+                            <div class="requirements__itemIcon"><img src="{% static 'assets/icons/shield-cross.svg'%}">
                             </div>
                             <div class="requirements__itemText">Не впитывает влагу</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-cross.svg'%}">
+                            <div class="requirements__itemIcon"><img src="{% static 'assets/icons/shield-cross.svg'%}">
                             </div>
                             <div class="requirements__itemText">Сохраняет микроклимат в доме</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-tick.svg'%}">
+                            <div class="requirements__itemIcon"><img src="{% static 'assets/icons/shield-tick.svg'%}">
                             </div>
                             <div class="requirements__itemText">Полностью безопасен для здоровья</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-cross.svg'%}">
+                            <div class="requirements__itemIcon"><img src="{% static 'assets/icons/shield-cross.svg'%}">
                             </div>
                             <div class="requirements__itemText">Не дает усадки после завершения стройки</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-cross.svg'%}">
+                            <div class="requirements__itemIcon"><img src="{% static 'assets/icons/shield-cross.svg'%}">
                             </div>
                             <div class="requirements__itemText">Высокая шумоизоляция</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-cross.svg'%}">
+                            <div class="requirements__itemIcon"><img src="{% static 'assets/icons/shield-cross.svg'%}">
                             </div>
                             <div class="requirements__itemText">Долговечность дома(Более 200 лет)</div>
                         </div>
@@ -132,40 +144,39 @@
                         Лучший выбор
                     </div>
                     <div class="requirements__listHeader">
-                        <div><img src="{% static 'assets/images/requirements/image%207.png'%}" alt="polyester"></div>
+                        <div><img src="{% static 'assets/images/requirements/image%207.png'%}" alt="polyester">
+                        </div>
                         <div class="requirements__listTitle">Полистеролбетон</div>
                     </div>
                     <div class="requirements__list">
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-tick-white.svg'%}"></div>
+                            <div class="requirements__itemIcon"><img
+                                    src="{% static 'assets/icons/shield-tick-white.svg'%}"></div>
                             <div class="requirements__itemText">Не впитывает влагу</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-tick-white.svg'%}"></div>
+                            <div class="requirements__itemIcon"><img
+                                    src="{% static 'assets/icons/shield-tick-white.svg'%}"></div>
                             <div class="requirements__itemText">Сохраняет микроклимат в доме</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-tick-white.svg'%}">
-                            </div>
+                            <div class="requirements__itemIcon"><img
+                                    src="{% static 'assets/icons/shield-tick-white.svg'%}"></div>
                             <div class="requirements__itemText">Полностью безопасен для здоровья</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-tick-white.svg'%}">
-                            </div>
+                            <div class="requirements__itemIcon"><img
+                                    src="{% static 'assets/icons/shield-tick-white.svg'%}"></div>
                             <div class="requirements__itemText">Не дает усадки после завершения стройки</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-tick-white.svg'%}"></div>
+                            <div class="requirements__itemIcon"><img
+                                    src="{% static 'assets/icons/shield-tick-white.svg'%}"></div>
                             <div class="requirements__itemText">Высокая шумоизоляция</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-tick-white.svg'%}"></div>
+                            <div class="requirements__itemIcon"><img
+                                    src="{% static 'assets/icons/shield-tick-white.svg'%}"></div>
                             <div class="requirements__itemText">Долговечность дома(Более 200 лет)</div>
                         </div>
                     </div>
@@ -177,33 +188,33 @@
                     </div>
                     <div class="requirements__list">
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-tick.svg'%}"></div>
+                            <div class="requirements__itemIcon"><img src="{% static 'assets/icons/shield-tick.svg'%}">
+                            </div>
                             <div class="requirements__itemText">Не впитывает влагу</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-cross.svg'%}"></div>
+                            <div class="requirements__itemIcon"><img src="{% static 'assets/icons/shield-cross.svg'%}">
+                            </div>
                             <div class="requirements__itemText">Сохраняет микроклимат в доме</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-tick.svg'%}"></div>
+                            <div class="requirements__itemIcon"><img src="{% static 'assets/icons/shield-tick.svg'%}">
+                            </div>
                             <div class="requirements__itemText">Полностью безопасен для здоровья</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-tick.svg'%}"></div>
+                            <div class="requirements__itemIcon"><img src="{% static 'assets/icons/shield-tick.svg'%}">
+                            </div>
                             <div class="requirements__itemText">Не дает усадки после завершения стройки</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-tick.svg'%}"></div>
+                            <div class="requirements__itemIcon"><img src="{% static 'assets/icons/shield-tick.svg'%}">
+                            </div>
                             <div class="requirements__itemText">Высокая шумоизоляция</div>
                         </div>
                         <div class="requirements__item">
-                            <div class="requirements__itemIcon">
-                                <img src="{% static 'assets/icons/shield-tick.svg'%}"></div>
+                            <div class="requirements__itemIcon"><img src="{% static 'assets/icons/shield-tick.svg'%}">
+                            </div>
                             <div class="requirements__itemText">Долговечность дома(Более 200 лет)</div>
                         </div>
                     </div>
@@ -211,30 +222,31 @@
             </div>
         </div>
     </article>
-    <div class="title">Каталог</div>
+    <div class="title" id="catalogue"><span>Каталог</span></div>
     <article class="catalogue__container">
         <div class="catalogue__grid">
-             {% if catalog %}
+            {% if catalog %}
             {% for cats in catalog %}
             <div class="catalogue__article">
                 <div class="catalogue__articleTitle bold">{{cats.title}}</div>
                 <div class="bold">Габариты</div>
-                <div class="catalogue__dimensionsGrid">
+                <div class="catalogue__table">
                     {% for size in cats.content %}
-                        <div class="catalogue__dimensionsItem">{{size}}</div>
+                    <div class="catalogue__tableRowItem">{{size}}</div>
                     {%endfor%}
                 </div>
-                <div><img class="catalogue__articleCover" src="/media/{{cats.img}}" alt="{{cats.title}}">
+                <div>
+                    <img class="catalogue__articleCover" src="/media/{{cats.img}}" alt="{{cats.title}}">
                 </div>
             </div>
             {%endfor%}
             {%endif%}
         </div>
-        <div class="button">
+        <div class="button open">
             Получить прайс
         </div>
     </article>
-    <div class="title">Размерный ряд</div>
+    <div class="title" id="sizeRange"><span>Размерный ряд</span></div>
     <article class="sizeRange__container">
         <div class="sizeRange__table">
             <div class="sizeRange__tableHeader sizeRange__tableRow">
@@ -242,7 +254,7 @@
                 <div class="sizeRange__tableItem">Ширина</div>
                 <div class="sizeRange__tableItem">Высота</div>
             </div>
-             {% if size %}
+            {% if size %}
             {% for si in size %}
             <div class="sizeRange__tableContent sizeRange__tableRow">
                 <div class="sizeRange__tableItem">{{si.length}}</div>
@@ -252,40 +264,39 @@
             {%endfor%}
             {%endif%}
         </div>
-        <div class="button">
+        <div class="button open">
             Получить консультацию
         </div>
     </article>
-
-    <article class="product">
-        <div class="title">Наше производство</div>
-        <div class="owl-carousel owl-theme product_slider">
+    <article class="product" id="product">
+        <div class="title"><span>Наше производство</span></div>
+        <div class="owl-carousel owl-theme product_slider" id="slider">
             {% if slider %}
             {% for slid in slider %}
-                <img class="product_slider__item" src="/media/{{slid.img}}" alt="{{slid.title}}">
+            <img class="product_slider__item" src="/media/{{slid.img}}" alt="{{slid.title}}">
             {%endfor%}
             {%endif%}
         </div>
     </article>
-    <div class="title">О нас</div>
+    <div class="title" id="about"><span>О нас</span></div>
     <article class="about__container">
         <div class="about__slider">
             <div class="about__text">
                 <div class="about__title">Первый блочный комбинат</div>
-                <div>
+                <div class="about__text_text">
                     Это российская компания, которая производит инновационный, энергоэффективный, тепловой
                     полистиролбетон для жилого и коммерческого строительства, а также предоставляет комплекс услуг
                     по проектированию, строительству, сопровождению и авторскому надзору.Многолетний опыт позволяет
                     нам находить оптимальные решения для проектирования и строительства частных и промышленных
                     сооружений, в том числе по индивидуальным параметрам. На каждом этапе реализации проекта мы
-                    четко соблюдаем стандарты качества, принятые в нашей компании.
+                    четко соблюдаем стандарты качества, принятые в нашей компании.<br><br>
                     Наша команда высококвалифицированных специалистов знает все тонкости каждого этапа: от
                     производства продукции до проектирования и строительства. Сертифицированные специалисты
                     обеспечивают контроль всех процессов, поэтому мы с уверенностью можем гарантировать вам
                     получение качественного результата
                 </div>
             </div>
-            <div class="about__imageContainer">
+            <div class="about__imageContainer about owl-carousel owl-theme" id="aboutSlider">
                 {% if about %}
                 {% for ab in about %}
                 <img class="about__image" src="/media/{{ab.img}}" alt="{{ab.title}}">
@@ -293,31 +304,34 @@
                 {%endif%}
             </div>
         </div>
-        <div class="about__sliderArrows">
+        <!-- <div class="about__sliderArrows">
             <div class="arrow circle circleBlack arrowRight"></div>
             <div class="arrow circle circleBlack arrowLeft"></div>
-        </div>
+        </div> -->
     </article>
-    <div class="title">Качество и сертификаты</div>
-    <article class="certificates__container">
+    <div class="title"><span>Качество и сертификаты</span></div>
+    <article class="certificates__container" id="certificates">
         <div class="certificates__gallery">
             {% if sertificate %}
-                {% for sert in sertificate %}
-            <a href="/media/{{sert.img}}" data-fancybox="gallery" class="certificates__galleryItem">
-                <img src="/media/{{sert.img}}" alt="{{sert.title}}"/>
+            {% for sert in sertificate %}
+            <a href="/media/{{sert.img}}" data-fancybox="gallery" class="certificates__galleryItem"
+                data-caption="{{sert.title}}">
+                <img src="/media/{{sert.img}}" alt="{{sert.title}}" />
             </a>
-                {%endfor%}
+            {%endfor%}
             {%endif%}
         </div>
     </article>
-    <div class="title">Контакты</div>
-    <article class="contact__container">
+    <article class="contact__container" id="contact">
         <div class="contact__text">
             <div>
                 <div class="contact__title">КОНТАКТЫ</div>
-                <div class="contact__phone"><img alt="phoneIcon" src="{% static 'assets/icons/call.svg'%}">+7 (923) 414-90-35
+                <div class="contact__phone"><img class="contact__icon" alt="phoneIcon"
+                        src="{% static 'assets/icons/call.svg'%}">
+                    <a href="tel:+7 (923) 414-90-35">+7(923)414-90-35</a>
                 </div>
-                <div class="contact__email"><img alt="emailIcon" src="{% static 'assets/icons/mail.svg'%}">Thehalomsk@gmail.com
+                <div class="contact__email"><img class="contact__icon" alt="emailIcon"
+                        src="{% static 'assets/icons/mail.svg'%}"><a>Thehalomsk@gmail.com</a>
                 </div>
             </div>
             <div>
@@ -333,20 +347,20 @@
 </main>
 <footer>
     <div class="navbar__container">
-        <div class="navbar__logo">THEHALO</div>
+        <div class="navbar__logo"> <img src="{% static 'assets/images/logo.png'%}" alt=""> </div>
         <div class="navbar__items">
-            <div class="navbar__item">Преимущества</div>
-            <div class="navbar__item">Каталог</div>
-            <div class="navbar__item">Размерный ряд</div>
-            <div class="navbar__item">Наше производство</div>
-            <div class="navbar__item">О нас</div>
-            <div class="navbar__item">Контакты</div>
+            <div class="navbar__item" onclick="anchor('advantages')">Преимущества</div>
+            <div class="navbar__item" onclick="anchor('catalogue')">Каталог</div>
+            <div class="navbar__item" onclick="anchor('sizeRange')">Размерный ряд</div>
+            <div class="navbar__item" onclick="anchor('product')">Наше производство</div>
+            <div class="navbar__item" onclick="anchor('about')">О нас</div>
+            <div class="navbar__item" onclick="anchor('contact')">Контакты</div>
         </div>
         <div class="navbar__call">
             <div class="navbar__phone"><img alt="phoneIcon" class="phoneIcon" src="{% static 'assets/icons/call.svg'%}">
-                +7(923)414-90-35
+                <a href="tel:+7 (923) 414-90-35">+7(923)414-90-35</a>
             </div>
-            <div class="button button__small">Заказать звонок</div>
+            <div class="button button__small open">Заказать звонок</div>
         </div>
     </div>
 </footer>

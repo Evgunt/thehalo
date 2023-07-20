@@ -25,7 +25,7 @@
     transition: border-bottom-width 1s;
 }
 .navbar__item:hover{
-    border-bottom: 1.5px solid var(--white);
+    box-shadow: 0 4px 1px -2px var(--white);
 }
 .navbar__call{
     display: flex;
@@ -45,12 +45,18 @@ footer>.navbar__container{
     background-color: var(--grey);
 }
 
-@media only screen and (max-width: 1200px) {
-    .navbar__items{
-        display: none;
-        background-color: yellow;
-    }
+@media only screen and (max-width: 1700px) {
     .navbar__call{
         display: none;
     }
 }
+
+/*@media only screen and (max-width: 1000px) {*/
+/*    .navbar__items{*/
+/*        display: none;*/
+/*        background-color: yellow;*/
+/*    }*/
+/*    .navbar__call{*/
+/*        display: none;*/
+/*    }*/
+/*}*/

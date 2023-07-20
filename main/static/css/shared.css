@@ -1,4 +1,4 @@
-.title{
+.title {
     text-transform: uppercase;
     font-size: 40px;
     color: #636363;
@@ -7,50 +7,66 @@
     font-weight: 600;
     margin-bottom: 40px;
 }
-.bold{
+
+.title span {
+    font-size: 40px;
+    font-weight: 600;
+    color: #000;
+}
+
+.bold {
     font-weight: 600;
 }
-.button{
+
+.button {
     display: flex;
-    padding: 24px 40px;
+    padding: 14px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 24px;
     border-radius: 8px;
     background: var(--green);
-    color:var(--white);
+    color: var(--white);
     width: fit-content;
     margin: 0 auto;
     cursor: pointer;
     transition: background-color 0.5s;
 }
-.button:hover{
+
+.button:hover {
     background: var(--lightGreen);
 }
-.button__small{
+
+.button__small {
     padding: 15px 15px;
     font-size: 20px;
     font-weight: 300;
 }
-.circle{
+
+.circle {
     aspect-ratio: 1/1;
-    width: 45px;
+    width: 60px;
     border-radius: 100%;
-    border:1px solid var(--lightGrey);
+    border: 1px solid var(--lightGrey);
 }
-.circle:hover{
+
+.circle:hover {
     background-color: var(--white);
 }
-.circleBlack{
+
+.circleBlack {
     border: 1px solid var(--grey);
 }
-.circleBlack:hover{
+
+.circleBlack:hover {
     background-color: var(--grey);
-    border: unset;
+    border: 1px solid var(--grey);
+
 }
-.arrow{
+
+.arrow {
     transition: background-color 0.5s;
     display: flex;
     background-size: 80%;
@@ -60,26 +76,32 @@
     justify-content: center;
     align-items: center;
 }
-.arrowRight{
+
+.arrowRight {
     background-image: url("../assets/icons/arrows/arrowRightBlack.svg");
 }
-.arrowRight:hover{
+
+.arrowRight:hover {
     background-image: url("../assets/icons/arrows/arrowRightWhite.svg");
 }
-.arrowLeft{
+
+.arrowLeft {
     background-image: url("../assets/icons/arrows/arrowLeftBlack.svg");
 }
-.arrowLeft:hover{
+
+.arrowLeft:hover {
     background-image: url("../assets/icons/arrows/arrowLeftWhite.svg");
 }
+
 @media screen and (max-width: 900px) {
-    .title{
+    .title {
         font-size: 30px;
         font-weight: 700;
     }
 }
+
 @media screen and (max-width: 700px) {
-    .title{
+    .title {
         font-size: 20px;
         font-weight: 700;
     }

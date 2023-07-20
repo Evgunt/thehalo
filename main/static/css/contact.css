@@ -1,7 +1,6 @@
 .contact__container {
     display: flex;
     flex-direction: row;
-    height: 100vh;
 }
 
 .contact__text {
@@ -30,17 +29,24 @@
     width: 100%;
 
 }
-
-.contact__phone, .contact__email {
-    font-size: 30px;
-    font-weight: 400;
+.contact__email, .contact__phone
+{
     margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
-
+.contact__phone a, .contact__email a{
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 15px;
+}
+.contact__icon{
+    height: 30px;
+}
 .contact__location {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 24px;
 }
 
 @media screen and (max-width: 900px) {
@@ -53,7 +59,13 @@
     }
     .contact__container {
         display: flex;
-        flex-direction: row;
-        height: 60vh;
+        flex-direction: column-reverse;
+        /*height: 60vh;*/
+    }
+    .contact__text{
+        width: unset;
+    }
+    .contact__map{
+        width: unset;
     }
 }

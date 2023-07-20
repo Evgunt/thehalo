@@ -10,7 +10,7 @@
     gap: 50px;
     padding: var(--globalPadding);
     padding-top: 5%;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 .banner__text{
     width: 60%;
@@ -20,8 +20,8 @@
     justify-content: space-between;
 }
 .banner__title{
-    font-size: 100px;
-    font-weight: 800;
+    font-size: 80px;
+    font-weight: 700;
     line-height: 100.1%;
     padding-bottom: 30px;
 }
@@ -62,7 +62,7 @@
     bottom: 30px;
     display: flex;
     justify-content: center;
-    width: auto;
+    width: 90%;
 }
 .banner__arrowButton{
     background-image: url('../assets/icons/arrows/arrow-down.svg');
@@ -70,6 +70,9 @@
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+}
+.banner__arrowButton:hover{
+    background-image: url('../assets/icons/arrows/arrow-downBlack.svg');
 }
 @media screen and (max-width: 1500px) {
     .banner__imageContainer{

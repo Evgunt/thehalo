@@ -16,7 +16,7 @@
     color: var(--white);
     width: 50%;
 }
-.about__text_text
+.about__longText
 {
     font-weight: 500;
     font-size: 21px;
@@ -37,6 +37,17 @@
     flex-direction: row-reverse;
     gap: 10px;
 }
+@media only screen and (max-width: 1500px) {
+    #aboutSlider{
+        display: none;
+    }
+    .about__text{
+        width: 70%;
+        margin: 0 auto;
+
+    }
+
+}
 @media screen and (max-width: 900px) {
     .about__text{
         width: 100%;
@@ -44,4 +55,19 @@
     .about__imageContainer{
         display: none;
     }
+
+}
+
+@media screen and (max-width: 700px) {
+    .about__text{
+        padding: 30px;
+    }
+    .about__longText
+    {
+        font-size: 14px;
+    }
+    .about__title{
+        font-size: 18px;
+    }
+
 }

@@ -20,6 +20,20 @@
 <header>
     <article class="banner__container">
         <div class="navbar__container">
+            <div class="navbar__burger">
+                <input id="menu-toggle" type="checkbox"/>
+                <label onclick="changeNavbar()" class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                </label>
+                <div class="navbar__burgerMenu">
+                    <div class="navbar__burgerItem" onclick="anchor('advantages')">Преимущества</div>
+                    <div class="navbar__burgerItem" onclick="anchor('catalogue')">Каталог</div>
+                    <div class="navbar__burgerItem" onclick="anchor('sizeRange')">Размерный ряд</div>
+                    <div class="navbar__burgerItem" onclick="anchor('product')">Наше производство</div>
+                    <div class="navbar__burgerItem" onclick="anchor('about')">О нас</div>
+                    <div class="navbar__burgerItem" onclick="anchor('contact')">Контакты</div>
+                </div>
+            </div>
             <div class="navbar__logo"><img src="{% static 'assets/images/logo.png'%}" alt=""></div>
             <div class="navbar__items">
                 <div class="navbar__item" onclick="anchor('advantages')">Преимущества</div>
@@ -31,11 +45,12 @@
             </div>
             <div class="navbar__call">
                 <div class="navbar__phone"><img alt="phoneIcon" class="phoneIcon"
-                        src="{% static 'assets/icons/call.svg'%}">
+                                                src="{% static 'assets/icons/call.svg'%}">
                     <a href="tel:+7 (923) 414-90-35">+7(923)414-90-35</a>
                 </div>
-                <div class="button button__small open">Заказать звонок</div>
+                <div class="button button__small open navbar__callButton">Заказать звонок</div>
             </div>
+            <div class="navbar__blank"></div>
         </div>
         <div class="banner__content">
             <div class="banner__text">
@@ -226,54 +241,87 @@
     <article class="catalogue__container">
         <div class="catalogue__grid">
             <div class="catalogue__article">
-                    <div class="catalogue__articleTitle bold">Блок полистиролбетонный марки</div>
-                    <div class="bold">Габариты</div>
-                    <div class="catalogue__table">
+                <div class="catalogue__articleTitle bold">Блок полистиролбетонный марки</div>
+                <div class="bold">Габариты</div>
+                <div class="catalogue__table">
+                    <div class="catalogue__tableRow">
                         <div class="catalogue__tableRowItem">600x300x200</div>
+                        <div class="catalogue__tableRowMarker"></div>
                         <div class="catalogue__tableRowItem">600x300x400</div>
+                        <div class="catalogue__tableRowMarker"></div>
                         <div class="catalogue__tableRowItem">600x150x300</div>
+                    </div>
+                    <div class="catalogue__tableRow">
                         <div class="catalogue__tableRowItem">600x200x400</div>
+                        <div class="catalogue__tableRowMarker"></div>
                         <div class="catalogue__tableRowItem">600x300x300</div>
+                        <div class="catalogue__tableRowMarker"></div>
                         <div class="catalogue__tableRowItem">600x200x200</div>
+                    </div>
+                    <div class="catalogue__tableRow">
                         <div class="catalogue__tableRowItem">600x150x200</div>
+                        <div class="catalogue__tableRowMarker"></div>
                         <div class="catalogue__tableRowItem">600x100x300</div>
+                        <div class="catalogue__tableRowMarker"></div>
                         <div class="catalogue__tableRowItem">2400x600x600</div>
                     </div>
-                    <div><img class="catalogue__articleCover" src="{% static 'assets/images/catalogue/%5Bremoval%202.png'%}" alt="">
-                    </div>
                 </div>
-                <div class="catalogue__article">
-                    <div class="catalogue__articleTitle bold">Полистиролбетонный армоблок с пазогребнем марки</div>
-                    <div class="bold">Габариты</div>
-                     <div class="catalogue__table">
+                <div><img class="catalogue__articleCover" src="{% static 'assets/images/catalogue/%5Bremoval%202.png'%}"
+                          alt="">
+                </div>
+            </div>
+            <div class="catalogue__article">
+                <div class="catalogue__articleTitle bold">Полистиролбетонный армоблок с пазогребнем марки</div>
+                <div class="bold">Габариты</div>
+                <div class="catalogue__dimensionsGrid">
+                    <div class="catalogue__tableRow">
                         <div class="catalogue__tableRowItem">2400x400x600</div>
                     </div>
-                    <img class="catalogue__articleCover" src="{% static 'assets/images/catalogue/%5Bremoval%204.png'%}" alt="">
                 </div>
-                <div class="catalogue__article">
-                    <div class="catalogue__articleTitle bold">Панель полистиролбетонная армированная</div>
-                    <div class="bold">Габариты</div>
-                    <div class="catalogue__table">
-                        <div class="catalogue__tableRowItem">1275x300x2500</div>
-                    </div>
-                    <div><img class="catalogue__articleCover" src="{% static 'assets/images/catalogue/%5Bremoval%203.png'%}" alt="">
+                <img class="catalogue__articleCover" src="{% static 'assets/images/catalogue/%5Bremoval%204.png'%}"
+                     alt="">
+            </div>
+            <div class="catalogue__article">
+                <div class="catalogue__articleTitle bold">Панель полистиролбетонная армированная</div>
+                <div class="bold">Габариты</div>
+                <div class="catalogue__dimensionsGrid">
+                    <div class="catalogue__tableRow">
+                        <div class="catalogue__tableRowItem">
+                            1275x300x2500
+                        </div>
                     </div>
                 </div>
-                <div class="catalogue__article">
-                    <div class="catalogue__articleTitle bold">Блок полистиролбетонный марки</div>
-                    <div class="bold">Габариты</div>
-                    <div class="catalogue__table">
+                <div><img class="catalogue__articleCover" src="{% static 'assets/images/catalogue/%5Bremoval%203.png'%}"
+                          alt="">
+                </div>
+            </div>
+            <div class="catalogue__article">
+                <div class="catalogue__articleTitle bold">Блок полистиролбетонный марки</div>
+                <div class="bold">Габариты</div>
+                <div class="catalogue__dimensionsGrid">
+                    <div class="catalogue__tableRow">
                         <div class="catalogue__tableRowItem">2700x370x2500</div>
+                        <div class="catalogue__tableRowMarker"></div>
                         <div class="catalogue__tableRowItem">3000x370x2500</div>
+                        <div class="catalogue__tableRowMarker"></div>
                         <div class="catalogue__tableRowItem">3000x300x2500</div>
+                    </div>
+                    <div class="catalogue__tableRow">
                         <div class="catalogue__tableRowItem">2700x300x2500</div>
+                        <div class="catalogue__tableRowMarker"></div>
                         <div class="catalogue__tableRowItem">2700x300x2500</div>
+                        <div class="catalogue__tableRowMarker"></div>
                         <div class="catalogue__tableRowItem">3000x370x2500</div>
+                    </div>
+                    <div class="catalogue__tableRow">
                         <div class="catalogue__tableRowItem">2700x370x2500</div>
                     </div>
-                    <div><img class="catalogue__articleCover" src="{% static 'assets/images/catalogue/%5Bremoval%201.png'%}" alt="">
-                    </div>
+
                 </div>
+                <div class="catalogue__articleCoverContainer"><img class="catalogue__articleCover" src="{% static 'assets/images/catalogue/%5Bremoval%201.png'%}"
+                          alt="">
+                </div>
+            </div>
         </div>
         <div class="button open">
             Получить прайс
@@ -290,9 +338,9 @@
             {% if size %}
             {% for si in size %}
             <div class="sizeRange__tableContent sizeRange__tableRow">
-                <div class="sizeRange__tableItem">{{si.length}}</div>
-                <div class="sizeRange__tableItem">{{si.width}}</div>
-                <div class="sizeRange__tableItem">{{si.heit}}</div>
+                <div class="sizeRange__tableItem">{{ si.length }}</div>
+                <div class="sizeRange__tableItem">{{ si.width }}</div>
+                <div class="sizeRange__tableItem">{{ si.heit }}</div>
             </div>
             {%endfor%}
             {%endif%}
@@ -316,7 +364,7 @@
         <div class="about__slider">
             <div class="about__text">
                 <div class="about__title">Первый блочный комбинат</div>
-                <div class="about__text_text">
+                <div class="about__longText">
                     Это российская компания, которая производит инновационный, энергоэффективный, тепловой
                     полистиролбетон для жилого и коммерческого строительства, а также предоставляет комплекс услуг
                     по проектированию, строительству, сопровождению и авторскому надзору.Многолетний опыт позволяет
@@ -348,8 +396,8 @@
             {% if sertificate %}
             {% for sert in sertificate %}
             <a href="/media/{{sert.img}}" data-fancybox="gallery" class="certificates__galleryItem"
-                data-caption="{{sert.title}}">
-                <img src="/media/{{sert.img}}" alt="{{sert.title}}" />
+               data-caption="{{sert.title}}">
+                <img src="/media/{{sert.img}}" alt="{{sert.title}}"/>
             </a>
             {%endfor%}
             {%endif%}
@@ -360,11 +408,11 @@
             <div>
                 <div class="contact__title">КОНТАКТЫ</div>
                 <div class="contact__phone"><img class="contact__icon" alt="phoneIcon"
-                        src="{% static 'assets/icons/call.svg'%}">
+                                                 src="{% static 'assets/icons/call.svg'%}">
                     <a href="tel:+7 (923) 414-90-35">+7(923)414-90-35</a>
                 </div>
                 <div class="contact__email"><img class="contact__icon" alt="emailIcon"
-                        src="{% static 'assets/icons/mail.svg'%}"><a>Thehalomsk@gmail.com</a>
+                                                 src="{% static 'assets/icons/mail.svg'%}"><a>Thehalomsk@gmail.com</a>
                 </div>
             </div>
             <div>
@@ -376,12 +424,13 @@
             </div>
         </div>
         <div class="contact__map">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1d70540f8974a7150769cb7e93b4dfe6a90453a18ef21dc6975b0dec2988b74e&amp;source=constructor" width="900" height="700" frameborder="0"></iframe>
+            <iframe  src="https://yandex.ru/map-widget/v1/?um=constructor%3A1d70540f8974a7150769cb7e93b4dfe6a90453a18ef21dc6975b0dec2988b74e&amp;source=constructor"
+                     frameborder="0"></iframe>
     </article>
 </main>
 <footer>
     <div class="navbar__container">
-        <div class="navbar__logo"> <img src="{% static 'assets/images/logo.png'%}" alt=""> </div>
+        <div class="navbar__logo"><img src="{% static 'assets/images/logo.png'%}" alt=""></div>
         <div class="navbar__items">
             <div class="navbar__item" onclick="anchor('advantages')">Преимущества</div>
             <div class="navbar__item" onclick="anchor('catalogue')">Каталог</div>

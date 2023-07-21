@@ -9,7 +9,6 @@
 }
 
 .title span {
-    font-size: 40px;
     font-weight: 600;
     color: #000;
 }
@@ -92,10 +91,15 @@
 .arrowLeft:hover {
     background-image: url("../assets/icons/arrows/arrowLeftWhite.svg");
 }
+@media screen and (max-width: 1500px) {
+    .title{
+        font-size: 30px;
 
+    }
+}
 @media screen and (max-width: 900px) {
     .title {
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 700;
     }
 }
@@ -104,5 +108,11 @@
     .title {
         font-size: 20px;
         font-weight: 700;
+    }
+    .button{
+        font-size: 19px;
+    }
+    .button__small{
+        font-size: 17px;
     }
 }

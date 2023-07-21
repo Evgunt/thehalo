@@ -1,10 +1,12 @@
 :root{
     --green:#80BA28;
     --lightGreen: #a0e142;
-    --white:white;
+    --white: white;
     --grey:#000810;
     --lightGrey: #b2b2b2;
     --tableBorder:1px solid #D9D9D9;
     --globalPadding:0 5% 0 5%;
     --owlArrowCircleWidth:50px;
+    --burgerMenuPadding:15px;
+    --burgerSidePadding:20px;
 }

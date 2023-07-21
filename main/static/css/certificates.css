@@ -2,14 +2,14 @@
 
 }
 .certificates__gallery{
-    /*display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;*/
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:24px;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
 }
 .certificates__gallery>a{
     display: block;
-    width: 344px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
@@ -17,8 +17,9 @@
     width: 100%;
 }
 .certificates__galleryItem>img{
-    width: 335px;
+    width: 100%;
 }
+
 @media screen and (max-width: 900px) {
     .certificates__gallery{
         grid-template-columns: 1fr 1fr;
@@ -26,7 +27,7 @@
 }
 @media screen and (max-width: 700px) {
     .certificates__gallery{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     .certificates__galleryItem{
         display: none;

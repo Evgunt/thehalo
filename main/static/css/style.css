@@ -54,7 +54,9 @@ a {
 a:visited {
     color: unset;
 }
-
+span{
+    all: unset;
+}
 .enrollWindow__container {
     display: none;
     position: fixed;
@@ -132,4 +134,36 @@ a:visited {
     font-weight: 500;
     font-size: 20px;
     text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+   article{
+       margin-bottom: 80px;
+   }
+    .enrollWindow__form input,.enrollWindow__form textarea{
+        width: 350px;
+    }
+    .enrollWindow__form{
+        margin-left: -225px;
+    }
+}
+@media screen and (max-width: 445px) {
+    .enrollWindow__form input,.enrollWindow__form textarea{
+        width: 285px;
+    }
+    .enrollWindow__form{
+        margin-left: -190px;
+    }
+    .enrollWindow__title
+    {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .enrollWindow__form input,.enrollWindow__form textarea{
+        width: 90%;
+    }
+    .enrollWindow__form{
+        margin-left: -182px;
+    }
 }

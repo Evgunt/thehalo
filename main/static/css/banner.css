@@ -1,7 +1,8 @@
 .banner__container{
     background-image: url('../assets/images/banner/aron-yigin-dFnEgqVYMTw-unsplash 1.png');
-    background-size: 100%;
+    background-size: cover;
     color: white;
+    background-repeat: no-repeat;
 }
 .banner__content{
     position: relative;
@@ -33,6 +34,7 @@
     display: flex;
     flex-direction: row;
     gap: 12px;
+    margin-bottom: 60px;
 }
 .banner__buttonContainer{
 
@@ -75,8 +77,46 @@
     background-image: url('../assets/icons/arrows/arrow-downBlack.svg');
 }
 @media screen and (max-width: 1500px) {
+    .banner__title{
+        font-size: 60px;
+        font-weight: 600;
+        padding-bottom: 15px;
+    }
+    .banner__slogan{
+        font-size: 25px;
+        font-weight: 500;
+    }
     .banner__imageContainer{
         display: none;
+    }
+    .banner__text{
+        gap: 50px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .banner__container{
+        text-align: center;
+    }
+    .banner__title {
+        font-size: 50px;
+    }
+    .banner__slogan{
+        font-size: 23px;
+    }
+    .banner__container input{
+        display: none;
+    }
+    .banner__enrollForm{
+        justify-content: center;
+    }
+    .banner__arrowButtonContainer{
+        display: none;
+    }
+    .banner__enrollFormContainer{
+        gap: 40px;
+    }
+    .banner__enrollForm{
+        margin-bottom: 0;
     }
 }
 @media screen and (max-width: 700px) {
@@ -85,5 +125,13 @@
     }
     .banner__enrollInput{
         font-size: 30px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .banner__title{
+        font-size: 37px;
+    }
+    .banner__slogan{
+        font-size: 18px;
     }
 }

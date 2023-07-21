@@ -27,3 +27,11 @@
 .sizeRange__tableContent>.sizeRange__tableItem{
     padding: 28px 10px;
 }
+@media screen and (max-width: 700px){
+    #sizeRange{
+        display: none;
+    }
+    .sizeRange__container{
+        display: none;
+    }
+}

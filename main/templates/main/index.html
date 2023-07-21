@@ -225,22 +225,55 @@
     <div class="title" id="catalogue"><span>Каталог</span></div>
     <article class="catalogue__container">
         <div class="catalogue__grid">
-            {% if catalog %}
-            {% for cats in catalog %}
             <div class="catalogue__article">
-                <div class="catalogue__articleTitle bold">{{cats.title}}</div>
-                <div class="bold">Габариты</div>
-                <div class="catalogue__table">
-                    {% for size in cats.content %}
-                    <div class="catalogue__tableRowItem">{{size}}</div>
-                    {%endfor%}
+                    <div class="catalogue__articleTitle bold">Блок полистиролбетонный марки</div>
+                    <div class="bold">Габариты</div>
+                    <div class="catalogue__table">
+                        <div class="catalogue__tableRowItem">600x300x200</div>
+                        <div class="catalogue__tableRowItem">600x300x400</div>
+                        <div class="catalogue__tableRowItem">600x150x300</div>
+                        <div class="catalogue__tableRowItem">600x200x400</div>
+                        <div class="catalogue__tableRowItem">600x300x300</div>
+                        <div class="catalogue__tableRowItem">600x200x200</div>
+                        <div class="catalogue__tableRowItem">600x150x200</div>
+                        <div class="catalogue__tableRowItem">600x100x300</div>
+                        <div class="catalogue__tableRowItem">2400x600x600</div>
+                    </div>
+                    <div><img class="catalogue__articleCover" src="{% static 'assets/images/catalogue/%5Bremoval%202.png'%}" alt="">
+                    </div>
                 </div>
-                <div>
-                    <img class="catalogue__articleCover" src="/media/{{cats.img}}" alt="{{cats.title}}">
+                <div class="catalogue__article">
+                    <div class="catalogue__articleTitle bold">Полистиролбетонный армоблок с пазогребнем марки</div>
+                    <div class="bold">Габариты</div>
+                     <div class="catalogue__table">
+                        <div class="catalogue__tableRowItem">2400x400x600</div>
+                    </div>
+                    <img class="catalogue__articleCover" src="{% static 'assets/images/catalogue/%5Bremoval%204.png'%}" alt="">
                 </div>
-            </div>
-            {%endfor%}
-            {%endif%}
+                <div class="catalogue__article">
+                    <div class="catalogue__articleTitle bold">Панель полистиролбетонная армированная</div>
+                    <div class="bold">Габариты</div>
+                    <div class="catalogue__table">
+                        <div class="catalogue__tableRowItem">1275x300x2500</div>
+                    </div>
+                    <div><img class="catalogue__articleCover" src="{% static 'assets/images/catalogue/%5Bremoval%203.png'%}" alt="">
+                    </div>
+                </div>
+                <div class="catalogue__article">
+                    <div class="catalogue__articleTitle bold">Блок полистиролбетонный марки</div>
+                    <div class="bold">Габариты</div>
+                    <div class="catalogue__table">
+                        <div class="catalogue__tableRowItem">2700x370x2500</div>
+                        <div class="catalogue__tableRowItem">3000x370x2500</div>
+                        <div class="catalogue__tableRowItem">3000x300x2500</div>
+                        <div class="catalogue__tableRowItem">2700x300x2500</div>
+                        <div class="catalogue__tableRowItem">2700x300x2500</div>
+                        <div class="catalogue__tableRowItem">3000x370x2500</div>
+                        <div class="catalogue__tableRowItem">2700x370x2500</div>
+                    </div>
+                    <div><img class="catalogue__articleCover" src="{% static 'assets/images/catalogue/%5Bremoval%201.png'%}" alt="">
+                    </div>
+                </div>
         </div>
         <div class="button open">
             Получить прайс

@@ -230,3 +230,10 @@ footer > .navbar__container {
         gap: 60px
     }
 }
+@media only screen and (max-width: 700px) {
+    .hidden
+    {
+        display:none !important;
+    }
+}
+
